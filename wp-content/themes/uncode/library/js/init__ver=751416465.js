@@ -900,7 +900,7 @@
 			 if (pageHeader != undefined) {
 				 var backs = pageHeader.querySelectorAll('.header-bg'),
 					 backsCarousel = pageHeader.querySelectorAll('.header-uncode-block .background-inner'),
-					 uri_pattern = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/ig;
+					 uri_pattern=/(?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|\.{0,2}\/)[^\s()<>"']+/i;
 				 if (backs.length == 0 && backsCarousel.length == 0) {
 					 pageHeader.setAttribute('data-imgready', 'true');
 				 } else {
@@ -1041,7 +1041,7 @@
 				 calculatePadding = 0,
 				 isHeader = false,
 				 isFirst = false,
-				 uri_pattern = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/ig;
+				 uri_pattern=/(?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|\.{0,2}\/)[^\s()<>"']+/i;
  
 			 /** Add class to the row when contains responsive column size */
 			 getDivChildren(el.parentNode, '.column_parent, .column_child', function(obj, i, total) {
